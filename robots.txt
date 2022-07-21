@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /writable/
+Disallow: /uploads/
+Disallow: /system/
+Disallow: /assets/
+Disallow: /app/
+Disallow: /search/
+Disallow: /search?
+Disallow: /contact/
+Disallow: /contact?
+Disallow: /forgot-password/
+Disallow: /forgot-password?
+Disallow: /logout/
+Disallow: /users/logout?
+Disallow: /register
+Disallow: /register?
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /admin/login?
+Disallow: /.env
+Disallow: /Web.config
+
+Sitemap:    https://askbrn.com/sitemap.xml

@@ -1,0 +1,37 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Askbrn.com",
+    "short_name": "Askbrn",
+    "icons": [
+        {
+            "src": "assets/img/pwa/180x180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/pwa/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/pwa/32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/pwa/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "scope": "/",
+    "id": "Askbrn",
+    "start_url": "index.php",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "screenshots": []
+}
