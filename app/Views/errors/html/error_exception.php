@@ -11,7 +11,7 @@
 	</style>
 
 	<script type="text/javascript">
-		<?= file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.js') ?>
+		<?= file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.js'); ?>
 	</script>
 </head>
 <body onload="init()">
