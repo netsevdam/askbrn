@@ -1,6 +1,5 @@
 {
     "require": {
-        "deniro21/oauth2-vkontakte": "^1.1",
-        "guzzlehttp/guzzle": "^6.5"
+        "j4k/oauth2-vkontakte": "^1.1"
     }
 }

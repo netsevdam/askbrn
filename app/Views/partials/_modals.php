@@ -13,8 +13,6 @@
                             </div>
                             <div id="result-login"></div>
                             <form id="form-login">
-                            <?= csrf_field(); ?>
-                            
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control auth-form-input" placeholder="<?= trans("email"); ?>" value="<?= old('email'); ?>" <?= $rtl == true ? 'dir="rtl"' : ''; ?> required>
                                 </div>
@@ -177,7 +175,6 @@ if (authCheck()): ?>
                 <h4 class="modal-title"><?= trans("join_newsletter"); ?></h4>
                 <p class="modal-desc"><?= trans("newsletter_desc"); ?></p>
                 <form id="form_newsletter_modal" class="form-newsletter" data-form-type="modal">
-                    <?= csrf_field(); ?>
                     <div class="form-group">
                         <div class="modal-newsletter-inputs">
                             <input type="email" name="email" class="form-control form-input newsletter-input" placeholder="<?= trans('email') ?>">

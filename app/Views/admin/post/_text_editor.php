@@ -1,4 +1,4 @@
-<label class="control-label control-label-content"><?= htmlentities(trans('content',ENT_QUOTES)); ?></label>
+<label class="control-label control-label-content"><?= htmlentities(trans('content'),ENT_QUOTES); ?></label>
 <div id="main_editor">
     <div class="row">
       <div class="col-sm-12 editor-buttons">

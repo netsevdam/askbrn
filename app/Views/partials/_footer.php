@@ -60,8 +60,6 @@
                             <div class="widget-newsletter">
                                 <p><?= trans("join_newsletter"); ?></p>
                                 <form id="form_newsletter_footer" class="form-newsletter">
-                                    <?= csrf_field(); ?>
-                                    
                                     <div class="newsletter">
                                         <input type="email" name="email" class="newsletter-input" maxlength="199" placeholder="<?= trans("email"); ?>">
                                         <button type="submit" name="submit" value="form" class="newsletter-button"><?= trans("subscribe"); ?></button>

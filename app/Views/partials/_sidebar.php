@@ -6,7 +6,7 @@ if (!empty($baseWidgets)):
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="sidebar-widget">
-                            <div class="widget-head"><h3 class="title"><?= esc($widget->title); ?></h3></div>
+                            <div class="widget-head"><h4 class="title"><?= esc($widget->title); ?></h4></div>
                             <div class="widget-body">
                                 <ul class="widget-follow">
                                     <?php if (!empty($baseSettings->facebook_url)) : ?>
@@ -43,7 +43,7 @@ if (!empty($baseWidgets)):
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="sidebar-widget widget-popular-posts">
-                            <div class="widget-head"><h3 class="title"><?= esc($widget->title); ?></h3></div>
+                            <div class="widget-head"><h4 class="title"><?= esc($widget->title); ?></h4></div>
                             <div class="widget-body">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a class="btn-nav-tab" data-toggle="tab" data-date-type="week" data-lang-id="<?= $activeLang->id; ?>"><?= trans("this_week"); ?></a></li>

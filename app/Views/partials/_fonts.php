@@ -10,9 +10,7 @@ endif;
 endforeach;
 endif; 
 ?>
+<?= getFontURL($activeFonts,'primary'); ?>
 
-  <?= getFontURL($activeFonts,'primary'); ?>
-
-  <?= getFontURL($activeFonts,'secondary'); ?>
-
-  <?= getFontURL($activeFonts,'tertiary'); ?>
+<?= getFontURL($activeFonts,'secondary'); ?>
+<?= getFontURL($activeFonts,'tertiary'); ?>

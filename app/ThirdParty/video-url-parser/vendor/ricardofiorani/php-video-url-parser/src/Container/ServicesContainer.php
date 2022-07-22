@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ricardo Fiorani
- * Date: 31/08/2015
- * Time: 21:06.
- */
+
 namespace RicardoFiorani\Container;
 
 use RicardoFiorani\Adapter\CallableServiceAdapterFactoryInterface;
-use RicardoFiorani\Exception\DuplicatedServiceNameException;
+use RicardoFiorani\Container\Exception\DuplicatedServiceNameException;
 use RicardoFiorani\Renderer\EmbedRendererInterface;
 
 class ServicesContainer
@@ -47,6 +42,7 @@ class ServicesContainer
      * ServicesContainer constructor.
      *
      * @param array $config
+     * @throws DuplicatedServiceNameException
      */
     public function __construct(array $config = array())
     {
@@ -67,14 +63,15 @@ class ServicesContainer
         foreach ($config['services'] as $serviceName => $serviceConfig) {
             $this->registerService($serviceName, $serviceConfig['patterns'], $serviceConfig['factory']);
         }
+
         $this->setRenderer($config['renderer']['name'], $config['renderer']['factory']);
     }
 
     /**
      * Register a Service.
      *
-     * @param string          $serviceName
-     * @param array           $regex
+     * @param string $serviceName
+     * @param array $regex
      * @param string|callable $factory
      *
      * @throws DuplicatedServiceNameException
@@ -82,7 +79,12 @@ class ServicesContainer
     public function registerService($serviceName, array $regex, $factory)
     {
         if ($this->hasService($serviceName)) {
-            throw new DuplicatedServiceNameException();
+            throw new DuplicatedServiceNameException(
+                sprintf(
+                    'The service "%s" is already registered in the container.',
+                    $serviceName
+                )
+            );
         }
 
         $this->services[] = $serviceName;

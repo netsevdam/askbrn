@@ -15,8 +15,8 @@ class AuthModel extends BaseModel
     public function inputValues()
     {
         return [
-            'username' => inputPost('username','removeForbidden'),
-            'email' => inputPost('email','removeForbidden'),
+            'username' => inputPost('username'),
+            'email' => inputPost('email'),
             'password' => inputPost('password')
         ];
     }
@@ -219,7 +219,7 @@ class AuthModel extends BaseModel
         $data['status'] = 1;
         $data['email_status'] = 1;
         $data['token'] = generateToken();
-        $data['role'] = inputPost('role','removeForbidden');
+        $data['role'] = inputPost('role');
         $data['last_seen'] = date('Y-m-d H:i:s');
         $data['created_at'] = date('Y-m-d H:i:s');
         return $this->builder->insert($data);
@@ -448,9 +448,9 @@ class AuthModel extends BaseModel
         $user = $this->getUser($id);
         if (!empty($user)) {
             $data = [
-                'username' => inputPost('username','removeForbidden'),
+                'username' => inputPost('username'),
                 'email' => inputPost('email'),
-                'slug' => inputPost('slug','removeForbidden'),
+                'slug' => inputPost('slug'),
                 'about_me' => inputPost('about_me'),
                 'facebook_url' => inputPost('facebook_url'),
                 'twitter_url' => inputPost('twitter_url'),
@@ -460,7 +460,7 @@ class AuthModel extends BaseModel
                 'vk_url' => inputPost('vk_url'),
                 'youtube_url' => inputPost('youtube_url'),
                 'balance' => inputPost('balance'),
-                'total_pageviews' => inputPost('total_pageviews','removeForbidden')
+                'total_pageviews' => inputPost('total_pageviews')
             ];
             $uploadModel = new UploadModel();
             $file = $uploadModel->uploadTempFile('file', true);

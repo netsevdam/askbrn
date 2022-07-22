@@ -14,7 +14,6 @@
                     </div>
                     <div class="col-sm-12 text-right m-b-15">
                         <form action="<?= generateURL('search'); ?>" method="get" id="form_search_in_content">
-                            <?= csrf_field(); ?>
                             <input type="hidden" name="q" value="<?= esc($q); ?>">
                             <label class="custom-checkbox">
                                 <input type="checkbox" class="checkbox_terms_conditions" name="sc" value="1" onclick="document.getElementById('form_search_in_content').submit();" <?= !empty($searchInContent) ? 'checked' : ''; ?>>

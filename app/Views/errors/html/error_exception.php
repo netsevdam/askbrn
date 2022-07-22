@@ -11,7 +11,7 @@
 	</style>
 
 	<script type="text/javascript">
-		<?= file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.js'); ?>
+		<?= file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'debug.js') ?>
 	</script>
 </head>
 <body onload="init()">
@@ -22,7 +22,7 @@
 			<h1><?= esc($title), esc($exception->getCode() ? ' #' . $exception->getCode() : '') ?></h1>
 			<p>
 				<?= nl2br(esc($exception->getMessage())) ?>
-				<a href="https://www.google.com/search?q=<?= urlencode($title . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $exception->getMessage())) ?>"
+				<a href="https://www.duckduckgo.com/?q=<?= urlencode($title . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $exception->getMessage())) ?>"
 				   rel="noreferrer" target="_blank">search &rarr;</a>
 			</p>
 		</div>
@@ -385,7 +385,7 @@
 		<div class="container">
 
 			<p>
-				Displayed at <?= esc(date('H:i:sa')) ?> &mdash;
+				Displayed at <?= esc(date('H:i:sa')) ?> 
 			</p>
 
 		</div>

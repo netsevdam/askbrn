@@ -11,7 +11,7 @@ Disallow: /contact?
 Disallow: /forgot-password/
 Disallow: /forgot-password?
 Disallow: /logout/
-Disallow: /users/logout?
+Disallow: /logout?
 Disallow: /register
 Disallow: /register?
 Disallow: /admin/
@@ -20,4 +20,4 @@ Disallow: /admin/login?
 Disallow: /.env
 Disallow: /Web.config
 
-Sitemap:    https://askbrn.com/sitemap.xml
+Sitemap: https://askbrn.com/sitemap.xml

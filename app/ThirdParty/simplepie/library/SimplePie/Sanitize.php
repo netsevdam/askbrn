@@ -354,7 +354,7 @@ class SimplePie_Sanitize
 									}
 									else
 									{
-										trigger_error("$this->cache_location is not writeable. Make sure you've set the correct relative or absolute path, and that the location is server-writable.", E_USER_WARNING);
+										trigger_error("$this->cache_location is not writable. Make sure you've set the correct relative or absolute path, and that the location is server-writable.", E_USER_WARNING);
 									}
 								}
 							}
@@ -365,14 +365,7 @@ class SimplePie_Sanitize
 				// Get content node
 				$div = $document->getElementsByTagName('body')->item(0)->firstChild;
 				// Finally, convert to a HTML string
-				if (version_compare(PHP_VERSION, '5.3.6', '>='))
-				{
-					$data = trim($document->saveHTML($div));
-				}
-				else
-				{
-					$data = trim($document->saveXML($div));
-				}
+				$data = trim($document->saveHTML($div));
 
 				if ($this->remove_div)
 				{

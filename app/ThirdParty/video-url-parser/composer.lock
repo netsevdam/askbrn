@@ -8,19 +8,20 @@
     "packages": [
         {
             "name": "ricardofiorani/php-video-url-parser",
-            "version": "v1.0.2",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ricardofiorani/php-video-url-parser.git",
-                "reference": "3c98f3ade90f9c4eb66717e5cf106763b9930d84"
+                "reference": "87fa11db0d59201a443f0427c5ee2f928bbb8bf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ricardofiorani/php-video-url-parser/zipball/3c98f3ade90f9c4eb66717e5cf106763b9930d84",
-                "reference": "3c98f3ade90f9c4eb66717e5cf106763b9930d84",
+                "url": "https://api.github.com/repos/ricardofiorani/php-video-url-parser/zipball/87fa11db0d59201a443f0427c5ee2f928bbb8bf6",
+                "reference": "87fa11db0d59201a443f0427c5ee2f928bbb8bf6",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": ">=5.3"
             },
             "require-dev": {
@@ -44,12 +45,7 @@
                 }
             ],
             "description": "A Simple and efficient PHP Video URL Parser that gives you thumbnails and embed codes for various services as Youtube, Vimeo, DailyMotion and Facebook",
-            "support": {
-                "issues": "https://github.com/ricardofiorani/php-video-url-parser/issues",
-                "source": "https://github.com/ricardofiorani/php-video-url-parser/tree/v1.0.2"
-            },
-            "abandoned": "ricardofiorani/oembed",
-            "time": "2019-07-28T14:12:45+00:00"
+            "time": "2018-09-19T21:45:42+00:00"
         }
     ],
     "packages-dev": [],
@@ -59,6 +55,5 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": []
 }

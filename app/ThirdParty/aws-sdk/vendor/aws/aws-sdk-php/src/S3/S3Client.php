@@ -460,19 +460,17 @@ class S3Client extends AwsClient implements S3ClientInterface
     {
         $command = clone $command;
         $command->getHandlerList()->remove('signer');
-        $request = \Aws\serialize($command);
-        $signing_name = $this->getSigningName($request->getUri()->getHost());
 
         /** @var \Aws\Signature\SignatureInterface $signer */
         $signer = call_user_func(
             $this->getSignatureProvider(),
             $this->getConfig('signature_version'),
-            $signing_name,
+            $this->getConfig('signing_name'),
             $this->getConfig('signing_region')
         );
 
         return $signer->presign(
-            $request,
+            \Aws\serialize($command),
             $this->getCredentials()->wait(),
             $expires,
             $options
@@ -638,22 +636,6 @@ class S3Client extends AwsClient implements S3ClientInterface
                     });
             };
         };
-    }
-
-    /**
-     * Special handling for when the service name is s3-object-lambda.
-     * So, if the host contains s3-object-lambda, then the service name
-     * returned is s3-object-lambda, otherwise the default signing service is returned.
-     * @param string $host The host to validate if is a s3-object-lambda URL.
-     * @return string returns the signing service name to be used
-     */
-    private function getSigningName($host)
-    {
-        if (strpos( $host, 's3-object-lambda')) {
-            return 's3-object-lambda';
-        }
-
-        return $this->getConfig('signing_name');
     }
 
     /** @internal */

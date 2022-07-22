@@ -18,19 +18,19 @@ class PostAdminModel extends BaseModel
     {
         return [
             'lang_id' => inputPost('lang_id'),
-            'title' => inputPost('title','removeForbidden'),
-            'title_slug' => inputPost('title_slug','removeForbidden'),
+            'title' => inputPost('title'),
+            'title_slug' => inputPost('title_slug'),
             'summary' => inputPost('summary'),
-            'category_id' => inputPost('category_id','removeForbidden'),
+            'category_id' => inputPost('category_id'),
             'content' => inputPost('content'),
             'optional_url' => inputPost('optional_url'),
             'need_auth' => inputPost('need_auth'),
-            'is_slider' => inputPost('is_slider','removeForbidden'),
-            'is_featured' => inputPost('is_featured','removeForbidden'),
-            'is_recommended' => inputPost('is_recommended','removeForbidden'),
-            'is_breaking' => inputPost('is_breaking','removeForbidden'),
-            'visibility' => inputPost('visibility','removeForbidden'),
-            'show_right_column' => inputPost('show_right_column','removeForbidden'),
+            'is_slider' => inputPost('is_slider'),
+            'is_featured' => inputPost('is_featured'),
+            'is_recommended' => inputPost('is_recommended'),
+            'is_breaking' => inputPost('is_breaking'),
+            'visibility' => inputPost('visibility'),
+            'show_right_column' => inputPost('show_right_column'),
             'keywords' => inputPost('keywords'),
             'image_description' => inputPost('image_description')
         ];

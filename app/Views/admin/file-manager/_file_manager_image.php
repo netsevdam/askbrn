@@ -18,7 +18,6 @@
                                     <span>JPEG</span>
                                     <span>PNG</span>
                                     <span>GIF</span>
-                                    <span>WEBP</span>
                                 </p>
                                 <p class="dm-upload-icon">
                                     <i class="fa fa-cloud-upload"></i>
@@ -82,7 +81,7 @@
             url: '<?= base_url("FileController/uploadImage"); ?>',
             queue: true,
             allowedTypes: 'image/*',
-            extFilter: ["jpg", "jpeg", "png", "gif", "webp"],
+            extFilter: ["jpg", "jpeg", "png", "gif"],
             extraData: function (id) {
                 return {
                     "file_id": id,

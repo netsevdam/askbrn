@@ -212,13 +212,7 @@ class GenericProvider extends AbstractProvider
     {
         if (!empty($data[$this->responseError])) {
             $error = $data[$this->responseError];
-            if (!is_string($error)) {
-                $error = var_export($error, true);
-            }
-            $code  = $this->responseCode && !empty($data[$this->responseCode])? $data[$this->responseCode] : 0;
-            if (!is_int($code)) {
-                $code = intval($code);
-            }
+            $code  = $this->responseCode ? $data[$this->responseCode] : 0;
             throw new IdentityProviderException($error, $code, $data);
         }
     }
