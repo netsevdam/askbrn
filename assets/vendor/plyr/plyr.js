@@ -1610,8 +1610,7 @@ typeof navigator === "object" && (function (global, factory) {
 
     var update = function update(container, data) {
       // eslint-disable-next-line no-param-reassign
-      container.innerHTML = data; // Check again incase of race condition
-
+      container.innerHTML = dompurify.sanitize(data); // Check again incase of race condition
       if (hasId && exists()) {
         return;
       } // Inject the SVG to the body

@@ -3369,7 +3369,7 @@ img.lazyload:not([src]) {
 
 .post-content .post-image .post-image-inner {
     width: auto;
-    height: auto;
+    max-height: 500px;
     max-width: 750px;
     margin: 0 auto;
     position: relative;
