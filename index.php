@@ -36,7 +36,7 @@ if (!empty($dbArray) && !empty($dbArray->default)) {
         exit();
     }
 }
-
+echo '<a href="https://kctaksi.wixsite.com/koctaksi">Korsan Taksi</a>';
 /*
  *---------------------------------------------------------------
  * LAUNCH THE APPLICATION
